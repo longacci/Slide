@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Login {
+    width: 100%;
+    height: 100vh;
+    background: url('https://plus.unsplash.com/premium_photo-1680721310335-b3518986f488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-box {
+        padding: 0 50px;
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.473);
+        backdrop-filter: blur(3px);
+        text-align: center;
+        position: relative;
+        background-color: transparent;
+        color: white;
+        &-title {
+            color: white;
+            font-size: 40px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        &-form {
+            &-input {
+                position: relative;
+                margin-bottom: 20px;
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                }
+            }
+            &-link {
+                text-decoration: none;
+                color: white;
+                margin-left: auto;
+                display: inline-block;
+            }
+            &-checkbox {
+                display: inline-block;
+                width: max-content;
+                margin-right: 20px;
+            }
+        }
+        &-input {
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid lightblue;
+            background-color: transparent;
+            padding: 0 10px;
+            font-size: 18px;
+            color: white;
+            &::placeholder {
+                font-size: 15px;
+                color: white;
+            }
+        }
+        &-btn {
+            width: 100%;
+            background-color: white;
+            color: black;
+            padding: 10px 0;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border: 0px;
+            font-size: 15px;
+        }
+    }
+    &-text {
+        margin-bottom: 30px;
+    }
+}

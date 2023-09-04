@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="box">
-            <img src="./girl.jpg" alt="" class="img">
-            <div class="circle"></div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus repudiandae, ut voluptate cumque sunt a? Qui excepturi accusamus sunt fugiat dignissimos totam,</div>
-        </div>
-        <div class="box">
-            <img src="./girl1.jpg" alt="" class="img">
-            <div class="circle"></div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus repudiandae, ut voluptate cumque sunt a? Qui excepturi accusamus sunt fugiat dignissimos totam,</div>
-        </div>
-        <div class="box">
-            <img src="./girl2.jpg" alt="" class="img">
-            <div class="circle"></div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus repudiandae, ut voluptate cumque sunt a? Qui excepturi accusamus sunt fugiat dignissimos totam,</div>
-        </div>
+    <div class="Login">
+        <div class="Login-box">
+            <h1 class="Login-box-title">Login</h1>
+            <form action="" class="Login-box-form">
+                <div class="Login-box-form-input">
+                    <input type="text" class="Login-box-input" name="username" placeholder="Username">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="Login-box-form-input">
+                    <input type="password" class="Login-box-input" name="password" placeholder="Password">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div class="Login-box-form-checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox">Remember me</label>
+                </div>
+                <a href="#" class="Login-box-form-link">Fogot Password</a>
+                <button class="Login-box-btn" type="submit">Login</button>
+            </form>
+            <p class="Login-text">
+                Don't have an account? <a href="#" class="Login-box-form-link">Register</a>
+            </p>
+        </div>    
     </div>
     <script src="./style.js"></script>
 </body>
