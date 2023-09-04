@@ -29,7 +29,8 @@
 }
 .Login-box-form-input {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 .Login-box-form-input i {
   position: absolute;
@@ -47,6 +48,11 @@
   display: inline-block;
   width: max-content;
   margin-right: 20px;
+}
+.Login-box-form-notice {
+  color: rgb(243, 80, 80);
+  opacity: 0;
+  visibility: hidden;
 }
 .Login-box-input {
   width: 300px;

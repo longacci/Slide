@@ -27,7 +27,8 @@
         &-form {
             &-input {
                 position: relative;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
+                text-align: left;
                 i {
                     position: absolute;
                     top: 50%;
@@ -45,6 +46,11 @@
                 display: inline-block;
                 width: max-content;
                 margin-right: 20px;
+            }
+            &-notice {
+                color: rgb(243, 80, 80);
+                opacity: 0;
+                visibility: hidden;
             }
         }
         &-input {
