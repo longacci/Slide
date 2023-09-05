@@ -8,30 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="Login">
-        <div class="Login-box">
-            <h1 class="Login-box-title">Login</h1>
-            <form action="" class="Login-box-form">
-                <div class="Login-box-form-input">
-                    <input type="text" class="Login-box-input" name="email" placeholder="Email">
-                    <i class="fa fa-user"></i>
-                </div>
-                <div class="Login-box-form-input">
-                    <input type="password" class="Login-box-input" name="password" placeholder="Password">
-                    <i class="fa fa-lock"></i>
-                    <p class="Login-box-form-notice" style="margin-top: 8px;">Password shorter 8 char</p>
-                </div>
-                <div class="Login-box-form-checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <label for="checkbox">Remember me</label>
-                </div>
-                <a href="#" class="Login-box-form-link">Fogot Password</a>
-                <button class="Login-box-btn" type="submit">Login</button>
-            </form>
-            <p class="Login-text">
-                Don't have an account? <a href="#" class="Login-box-form-link">Register</a>
-            </p>
-        </div>    
+    <div class="slide">
+        <i class="fa fa-arrow-left"></i>
+        <i class="fa fa-arrow-right"></i>
+        <ul class="slide-list">
+            <li class="slide-list-circle activeCircle"></li>
+            <li class="slide-list-circle"></li>
+            <li class="slide-list-circle"></li>
+            <li class="slide-list-circle"></li>
+        </ul>
+        <div class="slide-imglist">
+            <img src="https://images.unsplash.com/photo-1682685797527-63b4e495938f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="" class="slide-img active">
+            <img src="https://images.unsplash.com/photo-1693859468088-7d2839da6649?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="" class="slide-img">
+            <img src="https://images.unsplash.com/photo-1693467855454-b12ce0cc0be9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1828&q=80" alt="" class="slide-img">
+            <img src="https://images.unsplash.com/photo-1693884642068-98443d05b78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="" class="slide-img">
+        </div>
     </div>
     <script src="./style.js"></script>
 </body>
