@@ -1,48 +1,48 @@
 window.addEventListener("DOMContentLoaded",()=> {
+    // Slider
     const arrowLeft = document.querySelector(".fa-arrow-left");
     const arrowRight = document.querySelector(".fa-arrow-right");
-    const slideList = document.querySelectorAll(".slide-img");
+    const slideImg = document.querySelectorAll(".slide-img");
     const circle = document.querySelectorAll(".slide-list-circle");
+    const slideList = document.querySelector(".slide-imglist");
+    let valueLeftSlide = 0;
     arrowRight.addEventListener("click",()=> {
-        let item = document.querySelector(".active");
-        let itemCircle = document.querySelector(".activeCircle");
-        if (item.nextElementSibling) {
-            item.nextElementSibling.classList.add("active");
-            item.classList.remove("active");
-            itemCircle.nextElementSibling.classList.add("activeCircle");
-            itemCircle.classList.remove("activeCircle");
-        } else {
-            slideList[0].classList.add("active");
-            item.classList.remove("active");
+        valueLeftSlide -= 100;
+        if (valueLeftSlide < (-(slideImg.length-1) * 100)) {
+            slideList.style.left = `0`;
+            valueLeftSlide = 0;
+            document.querySelector(".activeCircle").classList.remove("activeCircle");
             circle[0].classList.add("activeCircle");
+        } else {
+            slideList.style.left = `${valueLeftSlide}%`;
+            let itemCircle = document.querySelector(".activeCircle");
+            itemCircle.nextElementSibling.classList.add("activeCircle");
             itemCircle.classList.remove("activeCircle");
         }
     })
     arrowLeft.addEventListener("click",()=> {
-        let item = document.querySelector(".active");
-        let itemCircle = document.querySelector(".activeCircle");
-        if (item.previousElementSibling) {
-            item.previousElementSibling.classList.add("active");
-            item.classList.remove("active");
-            itemCircle.previousElementSibling.classList.add("activeCircle");
-            itemCircle.classList.remove("activeCircle");
+        valueLeftSlide += 100;
+        if (valueLeftSlide > 0) {
+            slideList.style.left = `${-(slideImg.length-1) * 100}%`;
+            valueLeftSlide = -(slideImg.length-1) * 100;
+            document.querySelector(".activeCircle").classList.remove("activeCircle");
+            circle[circle.length-1].classList.add("activeCircle");
         } else {
-            slideList[slideList.length - 1].classList.add("active");
-            item.classList.remove("active");
-            circle[circle.length - 1].classList.add("activeCircle");
+            slideList.style.left = `${valueLeftSlide}%`;
+            let itemCircle = document.querySelector(".activeCircle");
+            itemCircle.previousElementSibling.classList.add("activeCircle");
             itemCircle.classList.remove("activeCircle");
         }
     })
     circle.forEach((item,key) => {
         item.addEventListener("click",(e) => {
-            let itemCircle = document.querySelector(".activeCircle");
-            let itemImg = document.querySelector(".active");
-            if (e.target !== itemCircle) {
-                itemCircle.classList.remove("activeCircle");
+            if (e.target !== document.querySelector(".activeCircle")) {
+                document.querySelector(".activeCircle").classList.remove("activeCircle");
                 e.target.classList.add("activeCircle");
-                itemImg.classList.remove("active");
-                slideList[key].classList.add("active");
+                valueLeftSlide = -(key * 100);
+                slideList.style.left = `${valueLeftSlide}%`;
             }
         })
     })
+    // -------------------------
 })
